@@ -1,4 +1,4 @@
-# SIMPLE-PAYMENT--INTRO
+# SIMPLE-PAYMENT-INTRO
 - git clone this repository
 - then run node server.js
 
