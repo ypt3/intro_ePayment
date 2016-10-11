@@ -15,10 +15,10 @@
     "rekuire": "^0.1.9"
   },
   "scripts": {
-    "debug": "node debug paymentApp.js",
-    "start": "node paymentApp.js"
+    "debug": "node debug server.js",
+    "start": "node server.js"
   },
-  "main": "paymentApp.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/voyager/efs-icon-management-service.git"
