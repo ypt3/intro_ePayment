@@ -66,7 +66,7 @@ app.post('/payments/cancelApproval/:paymentId', function(req, res){
 });
 
 app.listen(8000, function(){
-    console.log('Started payment app on port 8000');
+    console.log('Listening on port 8000');
 });
 
 function checkIfValidVersion(req, res) {
