@@ -1,0 +1,28 @@
+{
+  "name": "simple-payment-ingenico",
+  "version": "1.0.0",
+  "description": "A Simple Payment App making use of Ingenico's SDK",
+  "keywords": [],
+  "dependencies": {
+    "async": "^2.0.1",
+    "body-parser": "^1.15.2",
+    "connect-sdk-nodejs": "1.1.0",
+    "dateformat": "^1.0.12",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "lodash": "^4.16.4",
+    "node-uuid": "^1.4.7",
+    "rekuire": "^0.1.9"
+  },
+  "scripts": {
+    "debug": "node debug paymentApp.js",
+    "start": "node paymentApp.js"
+  },
+  "main": "paymentApp.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/voyager/efs-icon-management-service.git"
+  },
+  "author": "BPSerrano",
+  "license": ""
+}

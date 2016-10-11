@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link href="../bootstrap/css/custom.css" rel="stylesheet" />
+    <script src="../bootstrap/js/jquery-3.1.1.min.js"></script>
+    <link href="../bootstrap/js/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../bootstrap/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <title></title>
+</head>
+<script type="text/javascript">
+    $('document').ready(function () {
+        $('.modal-content').css('height', '390px');
+        $('.modal-content').css('padding-left', '30px');
+
+        $('#expDate').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            showButtonPanel: true,
+            dateFormat: 'MM yy',
+            onClose: function (dateText, inst) {
+                $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+                $(".ui-datepicker-calendar").hide();
+                $(".ui-datepicker-current").hide();
+            }
+        });
+
+        $('#expDate').on('focus', function () {
+            $(".ui-datepicker-calendar").hide();
+            $(".ui-datepicker-current").hide();
+        });
+    });
+</script>
+<body>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-center">Payment Details</h3>
+            </div>
+            <div class="col-xs-3">
+                <label class="form-control-static text-info">Payment ID:</label>
+            </div>
+            <div class="col-xs-9">
+                <label class="form-control-static small" id="paymentID"><%= paymentId %></label>
+            </div>
+            <div class="col-xs-3">
+                <label class="form-control-static text-info">Payment Status:</label>
+            </div>
+            <div class="col-xs-9">
+                <label class="form-control-static small" id="paymentStatus"><%= paymentStatus %></label>
+            </div>
+            <div class="col-xs-3">
+                <label class="form-control-static text-info">Amount:</label>
+            </div>
+            <div class="col-xs-9">
+                <label class="form-control-static small" id="amount"><%= currency %> <%= value %></label>
+            </div>
+            <div class="col-xs-3">
+                <label class="form-control-static text-info">Card Number:</label>
+            </div>
+            <div class="col-xs-9">
+                <label class="form-control-static small" id="cardNumber"><%= cardNumber %></label>
+            </div>
+            <div class="col-xs-3">
+                <label class="form-control-static text-info">Expiry Date:</label>
+            </div>
+            <div class="col-xs-9">
+                <label class="form-control-static small" id="expiryMonth"><%= expiryDate %></label>
+            </div>
+            <div class="col-xs-3">
+                <label class="form-control-static text-info">CVV:</label>
+            </div>
+            <div class="col-xs-9">
+                <label class="form-control-static small" id="cvv"><%= cvv %></label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

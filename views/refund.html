@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/custom.css" rel="stylesheet" />
+    <script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+    <link href="bootstrap/js/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet" />
+    <script src="bootstrap/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <title></title>
+</head>
+<script type="text/javascript">
+    $('document').ready(function () {
+        $('.modal-content').css('height', '270px');
+    });
+</script>
+<body>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-center">Refund Payment</h3>
+            </div>
+            <div class="col-xs-3">
+                <label class="form-control-static text-info text-nowrap">Payment ID:</label>
+            </div>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" id="paymentID" />
+            </div>
+            <div class="col-xs-3">
+                <label class="form-control-static text-info">Amount:</label>
+            </div>
+            <div class="col-xs-2">
+                <label class="form-control-static text-info small">Currency:</label>
+            </div>
+            <div class="col-xs-2">
+                <select id="currency" class="navbar-form">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="PHP">PHP</option>
+                </select>
+            </div>
+            <div class="col-xs-2">
+                <label class="form-control-static text-info small">Amount:</label>
+            </div>
+            <div class="col-xs-3">
+                <input type="text" class="form-control" id="amount" />
+            </div>
+            <div class="col-xs-3">
+                <label class="form-control-static text-info"></label>
+            </div>
+            <div class="col-xs-9">
+                <label class="form-control-static text-info"></label>
+            </div>
+            <div class="col-lg-12">
+                <center>
+                    <button class="btn-lg btn-success btn-round-lg">Refund</button>
+                </center>
+            </div>
+        </div>
+</body>
+</html>
