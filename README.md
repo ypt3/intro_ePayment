@@ -1,4 +1,6 @@
-# SIMPLE-PAYMENT-INGENICO
+# SIMPLE-PAYMENT--INTRO
+- git clone this repository
+- then run node server.js
 
 ## Endpoints
 
@@ -74,7 +76,7 @@ Refunds any transaction.
 ```
 
 ##### Cancel Payment (POST, /payments/cancelPayment/:paymentId)
-This makes it impossible to process the payment any further and will also try to reverse an authorization on a card. 
+This makes it impossible to process the payment any further and will also try to reverse an authorization on a card.
 ```
 POST /payments/cancelPayment/000000238700000001300000100001
 ```
@@ -95,5 +97,3 @@ Makes use of ingenico's connect-sdk.
 
 ##### Version 2
 Consumes ingenico's payment API without using the connect-sdk
-
-
