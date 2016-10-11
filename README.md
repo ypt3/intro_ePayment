@@ -1,5 +1,5 @@
 # SIMPLE-PAYMENT-INTRO
-- git clone this repository
+- git clone https://github.com/ypt3/intro_ePayment.git
 - then run node server.js
 
 ## Endpoints
