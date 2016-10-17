@@ -9,7 +9,7 @@ module.exports = {
     // https://developer.globalcollect.com/documentation/api/server/#payments
     buildPaymentRequest: function buildPaymentRequest(contentType, body) {
         var createPaymentRequest = samplePaymentRequest.body;
-        
+
         // Sets up the default card details & amount
         var defaultCard = samplePaymentRequest.card;
         var defaultAmount = samplePaymentRequest.amount;
@@ -52,10 +52,10 @@ module.exports = {
     // https://developer.globalcollect.com/documentation/api/server/#__merchantId__payments__paymentId__approve_post
     buildCaptureRequest: function buildCaptureRequest(contentType, body, result) {
         var createCaptureRequest = sampleCaptureRequest.body;
-        
+
         // Sets token equal to the generated token on the tokenize function
         createCaptureRequest.directDebitPaymentMethodSpecificInput.token = result.tokenizePayment.body.token;
-        
+
         // Sets dateCollect to date now (format is YYYYMMDD)
         createCaptureRequest.directDebitPaymentMethodSpecificInput.dateCollect = sampleCaptureRequest.getDateCollect();
 
@@ -77,7 +77,7 @@ module.exports = {
         // Sets amount equal to the request body (if present) or the default values (if body is not present)
         refundRequest.amountOfMoney.amount = Number(body.amount.value) || Number(defaultAmount.value);
         refundRequest.amountOfMoney.currencyCode = body.amount.currency || defaultAmount.currency;
-        
+
         // Sets refundDate to date now (format is YYYYMMDD)
         refundRequest.refundDate = sampleRefundRequest.getDateRefund();
 
