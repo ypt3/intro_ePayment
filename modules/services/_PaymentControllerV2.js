@@ -10,7 +10,7 @@ function _PaymentController(req, rrn, context) {
     this.query = req.query;
     this.body = req.body;
     this.headers = req.headers;
-    this.rrn = rrn; //identical item for SDK // one transaction not two "idemPotence"
+    this.rrn = rrn; 
     this.headers = req.headers;
     this.context = context;
 }
